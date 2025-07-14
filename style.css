@@ -1,5 +1,5 @@
 body {
-    font-family: Times New Roman;
+    font-family:"Times New Roman";
 	transition: background-color O.3s, color 0.3s; padding: 20px
 	}
 	#theme-toggle { text-algin: center; margin-bottom: 20px;
