@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: Times New Roman;
 	transition: background-color O.3s, color 0.3s; padding: 20px
 	}
 	#theme-toggle { text-algin: center; margin-bottom: 20px;
@@ -56,5 +56,32 @@ img {
 }
 
 h1, h2 {
-    color: #ffd700; /* złoty kolor */
+    color: #CC9900; /* złoty kolor */
 }
+body {
+	font-size: 16px;
+	line-height: 1.6;
+	padding: 16px;
+	margin: 0;
+}
+section {
+	margin-bottom: 30px;
+}
+h1, h2 {
+	text-algin: center;
+}
+button {
+	font-size: 18px;
+	padding: 10px 20px;
+	margin: 8px;
+	border-radius: 8px;
+	
+	@media (max-width: 600px) {
+		body {
+			font-size: 22px;
+		}
+		button {
+			width: 100%;
+			font-size: 20px;
+		}
+	}

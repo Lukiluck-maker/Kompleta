@@ -2,41 +2,83 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport"
+	content="width=device-width, inicjal-scale=1.0">
     <title>Kompleta – Jasna Góra</title>
     <link rel="stylesheet" href="style.css">
+	<style>
+	body {
+	background-color: white;
+	color: black;
+	transition: background 0.4s, color 0.4s;
+	}
+	img.neumy {
+	transition: filter 0.4s;
+	filter: none;
+	}
+	body.dark-mode {
+	background-color: black;
+	color: white;
+	}
+	body.dark-mode img.neumy {
+	filter: invert(1);
+	}
+	.toggle-button {
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	padding: 0.5rem 1rem;
+	background: #888;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	corsor: pointer;
+	z-index: 1000;
+	}
+	</style>
 </head>
-<body id="main-body" class="night">
-	<div id="theme-toggle">
-		<button onclick="setDay()"> Tryb dzienny</button>
-		<button onclick="setNight()">Tryb nocny</button>
-	</div>
+<body>
+<button class="toggle-button" onclick="toggleDarkMode()">🌙 / ☀️</button>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
     <header>
-        <h1><p style="text-align: center;"> Kompleta - modlitwa na zakończenie dnia.<br>Sobota XVII tygodnia zwykłego.<br>I tydzień psałterza.</p></h1>
+        <h1><p style="text-align: center;"><b>Kompleta - modlitwa na zakończenie dnia.<br>Sobota XVII tygodnia zwykłego.<br>I tydzień psałterza.</b></p></h1>
     </header>
 
     <main>
-        <section>
-            <h2>Wezwanie</h2>
-            <img src="Wezwanie.png" alt="Melodia wezwania" width="1134" height="673,5">
-			<p>W tym miejscu przewidziany jest rachunek sumienia. <br>Chwila ciszy…</p>
-			<img src="Akt pokuty III.png"alt="Melodia aktu pokuty" width="1134" height="331,5">
-        </section>
-
-        <section>
-            <h2>Akt pokuty</h2>
+		<section>
+			<h2>Wezwanie</h2>
+			<img src="Wezwanie.png" alt="Melodia wezwania" class="neumy"style="width: 100%; height: auto;">
+			<p><b>K.</b> † Boże, wejrzyj ku wspomożeniu memu.
+			<br><b>W.</b> Panie, pośpiesz ku ratunkowi memu.
+			<br>Chwała Ojcu i Synowi, i Duchowi Świętemu.
+			<br>Jak była na początku, teraz i zawsze,
+			<br>i na wieki wieków. Amen. Alleluja.</p>
+		</section>
+		<section>
+			<h2>Akt pokuty</h2>
+			<img src="Akt pokuty III.png" alt="Melodia aktu pokuty" class="neumy" style="width: 100%; height: auto;">
             <p><b>K.</b> Panie, który zostałeś posłany, aby uzdrowić skruszonych w sercu, zmiłuj się nad nami.
 			<br><b>W.</b> Zmiłuj się nad nami.
 			<br><b>K.</b> Chryste, który przyszedłeś wzywać grzeszników, zmiłuj się nad nami.
 			<br><b>W.</b> Zmiłuj się nad nami.
 			<br><b>K.</b> Panie, który siedzisz po prawicy Ojca, † aby się wstawiać za Twoim ludem, zmiłuj się nad nami.
 			<br><b>W.</b> Zmiłuj się nad nami.</p>
-            <img src="Modlitwa do aktu pokuty.png" alt="Melodia modlitwy do aktu pokuty" width="1134" height="299,25">
-        </section>
+            <img src="Modlitwa do aktu pokuty.png" alt="Melodia modlitwy do aktu pokuty" class="neumy" style="width: 100%; height: auto;">
+         </section>
 
 		<section>
             <h2>Hymn</h2>
 			<p><i>W ostatniej zwrotce niemal każdego hymnu, z reguły mamy zwrot do Trójcy Świętej, w związku z tym, podczas jej trwania robimy skłon, by jeszcze bardziej oddać Bogu chwałę.</i></p>
-            <img src="Hymn.png" alt="Melodia wezwania">
+            <img src="Hymn.png" alt="Melodia wezwania" class="neumy" style="width: 100%; height: auto;">
+			<p>1.Nim kres nadejdzie jasności,
+			<br>Błagamy, Stwórco wszechświata,
+			<br>Byś nas otaczał opieką
+			<br>I chronił w swojej dobroci.</p>
+
 			<p>2. Niech serca nawet uśpione
 				<br>Przez sen czuwają przy Tobie;
 				<br>A kiedy zbudzi je zorza,
@@ -56,7 +98,7 @@
 		<section>
 			<h2>Psalmodia</h2>
 			<p><b>Antyfona 1.:</b> Zmiłuj się nade mną, Panie * i wysłuchaj moją modlitwę.</p>
-			<img src="Psalm 4.png" alt="Melodia psalmu 4">
+			<img src="Psalm 4.png" alt="Melodia psalmu 4" class="neumy" style="width: 100%; height: auto;">
 			<p style="text-align: center;"><b>Psalm 4</b>
 			<br>Dziękczynienie
 			<br><i>Godnym podziwu uczynił Pan Tego, którego wskrzesił z martwych</i> (św. Augustyn)</p>
@@ -84,11 +126,12 @@
 				<br>Jak była na początku, teraz i zawsze, *
 				<br>i na wieki wieków. Amen.</p>
 				<p><i>Po każdym psalmie i pieśni powtarzamy antyfonę.</i></p>
+				<p><b>Antyfona 1.:</b> Zmiłuj się nade mną, Panie * i wysłuchaj moją modlitwę.</p>
 		</section>
 		
 		<section>
 		<p><b>Antyfona 2.:</b> Wśród nocy * błogosławcie Pana,</p>
-		<img src="Psalm 134.png" alt="Melodia psalmu 134">
+		<img src="Psalm 134.png" alt="Melodia psalmu 134" class="neumy" style="width: 100%; height: auto;">
 		<p style="text-align: center;"><b>Psalm 134</b>
 			<br>Wieczorna modlitwa w świątyni
 			<br><i>Chwalcie Boga naszego, wszyscy Jego słudzy, którzy się Go boicie, mali i wielcy!</i> (Ap 19, 5)</p>
@@ -102,16 +145,16 @@
 				<br>i Duchowi Świętemu.
 				<br>Jak była na początku, teraz i zawsze, *
 				<br>i na wieki wieków. Amen.</p>
+				<p><b>Antyfona 2.:</b> Wśród nocy * błogosławcie Pana,</p>
 		</section>
 		
 		<section>
-		<p><b>Czytanie</b> (Pwt 6, 4-7)</p>
+		<h2>Czytanie</h2>(Pwt 6, 4-7)
 		<p>Słuchaj, Izraelu: Pan jest naszym Bogiem, Panem jedynym. Będziesz miłował Pana, Boga twojego, z całego swego serca, z całej duszy swojej, ze wszystkich sił swoich. Niech pozostaną w twym sercu te słowa, które ja ci dziś nakazuję. Wpoisz je twoim synom, będziesz o nich mówił przebywając w domu, w czasie podróży, kładąc się spać i wstając ze snu. </p>
-		<img src="Responsorium krótkie.png" alt="Melodia responsorium krótkiego"
 		</section>
-		
 		<section>
-		<p><b>Responsorium krótkie</b></p>
+		<h2>Responsorium krótkie</h2>
+		<img src="Responsorium krótkie.png" alt="Melodia responsorium krótkiego" class="neumy" style="width: 100%; height: auto;">
 		<p><b>K.</b> W ręce Twoje, Panie * Powierzam ducha mojego.
 			<br><b>W.</b> W ręce Twoje, Panie / Powierzam ducha mojego.
 			<br><b>K.</b> Ty nas odkupiłeś, Panie, Boże wierny.
@@ -121,10 +164,10 @@
 		</section>
 		
 		<section>
-		<p><b>Antyfona do pieśni Symeona.:</b> Strzeż nas, Panie, gdy czuwamy, * podczas snu nas osłaniaj / abyśmy czuwali z Chrystusem / i odpoczywali w pokoju.</p>
-		<img src="Pieśń Symeona.png" alt="Melodia pieśni Symeona">
-		<p><b>Pieśń Symeona</b> (Łk 2, 29-32)</p>
+		<h2>Pieśń Symeona (Łk 2, 29-32)</h2>
 		<p><i>Kantyk Symeona śpiewamy na tony gregoriańskie, na ton prosty; na początku każdego dwuwersu dodajemy inicjum. </i></p>
+		<p><b>Antyfona:</b> Strzeż nas, Panie, gdy czuwamy, * podczas snu nas osłaniaj / abyśmy czuwali z Chrystusem / i odpoczywali w pokoju.</p>
+		<img src="Pieśń Symeona.png" alt="Melodia pieśni Symeona" class="neumy" style="width: 100%; height: auto;">
 		<p>Teraz, o Panie, pozwól odejść swemu słudze w pokoju, *
 			<br>według słowa Twojego,
 			<br>Bo moje oczy ujrzały Twoje zbawienie, *
@@ -138,12 +181,12 @@
 		</section>
 		
 		<section>
-		<img src="Modlitwa końcowa.png" alt="Melodia modlitwy końcowej">
+		<img src="Modlitwa końcowa.svg" alt="Melodia modlitwy końcowej" class="neumy" style="width: 100%; height: auto; filter: invert(1);"/>
 		<p>Noc spokojną i śmierć szczęśliwą niech nam da Bóg wszechmogący, Ojciec i Syn, i Duch Święty. <b>W.</b> Amen.</p>
 		</section>
 		
 		<section>
-		<img src="Antyfona _Witaj Królowo_.png" alt="Antyfona matyjna"
+		<img src="Antyfona _Witaj Królowo_.png" alt="Antyfona matyjna" class="neumy" style="width: 100%; height: auto;"
 		</section>
 		
 		<section>
@@ -180,19 +223,5 @@
 		<br>Inicjatorzy: Łukasz Butkowski i Zuzanna Bożek</i></p>
 
     </footer>
-	<script>
-		function setDay() {
-		const body =
-	document.getElementById("main-body");
-		body.classList.remove("night");
-		body.classList.add("day");
-		}
-		function setNight() {
-		const body =
-	document.getElementById("main-body");
-	body.classList.remove("day");
-	body.classList.add("night");
-	}
-	</script>
 </body>
 </html>
