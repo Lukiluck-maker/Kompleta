@@ -1,6 +1,44 @@
 body {
     font-family: sans-serif;
-    background-color: #000;
+	transition: background-color O.3s, color 0.3s; padding: 20px
+	}
+	#theme-toggle { text-algin: center; margin-bottom: 20px;
+	}
+	button {
+	margin: 5px;
+	padding: 10px 16px;
+	font-size: 16px;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	}
+
+	body.day {
+	background-color: #ffffff;
+	color: #000000;
+	}
+	body.day h1
+	body.day h2 {
+		color: #333333;
+	}
+	body.day button {
+		background-color: #dddddd;
+	color: #000000;
+	}
+	
+	body.night {
+	background-color: #000000;
+	color: #ffffff;
+	}
+	body.night h1
+	body.night h2 {
+		color #ffd700;
+		}
+	body.night button {
+		background-color: #222222;
+	color: #ffffff;}
+    
+	background-color: #000;
     color: #fff;
     padding: 20px;
 }

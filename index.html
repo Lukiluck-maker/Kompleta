@@ -5,7 +5,11 @@
     <title>Kompleta – Jasna Góra</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="main-body" class="night">
+	<div id="theme-toggle">
+		<button onclick="setDay()"> Tryb dzienny</button>
+		<button onclick="setNight()">Tryb nocny</button>
+	</div>
     <header>
         <h1><p style="text-align: center;"> Kompleta - modlitwa na zakończenie dnia.<br>Sobota XVII tygodnia zwykłego.<br>I tydzień psałterza.</p></h1>
     </header>
@@ -141,10 +145,54 @@
 		<section>
 		<img src="Antyfona _Witaj Królowo_.png" alt="Antyfona matyjna"
 		</section>
+		
+		<section>
+		<p><b><u>Była cicha i piękna jak wiosna</u></b>
+			<br>
+		<br>1. Była cicha i piękna jak wiosna,
+		<br>żyła prosto, zwyczajnie, jak my.
+		<br>Ona Boga na świat nam przyniosła
+		<br>i na ziemi wśród łez nowe dni zajaśniały.
+			<br>
+		<br>Ref.: / Matka, która wszystko rozumie,
+		<br>sercem ogarnia każdego z nas.
+		<br>Matka zobaczyć dobro w nas umie,
+		<br>Ona jest z nami w każdy czas. /2x
+			<br>
+		<br>2. Dzisiaj światu potrzeba dobroci,
+		<br>by niepokój zwyciężyć i zło.
+		<br>Trzeba ciepła, co życie ozłoci,
+		<br>trzeba Boga, więc ludziom
+		<br>nieśmy Go, tak jak Ona.
+			<br>
+		<br>3. Życie niesie za sobą cierpienie,
+		<br>zewsząd krzyże, zawody i ból,
+		<br>serce ludzkie wśród męki, udręczenia,
+		<br>ma nadzieję, że wciąż Ona czuwa i kocha.
+		</p>
+		</section>
     </main>
 
     <footer>
-        <p>Przygotował: Łukasz – dla wspólnoty pielgrzymkowej</p>
+        <p style="text-align: center;"><i>Projekt „Kompleta” z pielgrzymki na Jasną Górę
+		<br>w dn. 02.08.2025 r.
+		<br>Autor projektu: Łukasz Butkowski
+		<br>Inicjatorzy: Łukasz Butkowski i Zuzanna Bożek</i></p>
+
     </footer>
+	<script>
+		function setDay() {
+		const body =
+	document.getElementById("main-body");
+		body.classList.remove("night");
+		body.classList.add("day");
+		}
+		function setNight() {
+		const body =
+	document.getElementById("main-body");
+	body.classList.remove("day");
+	body.classList.add("night");
+	}
+	</script>
 </body>
 </html>
