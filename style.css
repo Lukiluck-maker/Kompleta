@@ -12,7 +12,9 @@ body {
 	border: none;
 	cursor: pointer;
 	}
-
+	.indent {
+		margin-left: 2em;
+	}
 	body.day {
 	background-color: #ffffff;
 	color: #000000;
@@ -61,8 +63,11 @@ h1, h2 {
 body {
 	font-size: 16px;
 	line-height: 1.6;
-	padding: 16px;
+	padding: 1em;
 	margin: 0;
+	max-width: none;
+	width: 100%;
+	
 }
 section {
 	margin-bottom: 30px;
