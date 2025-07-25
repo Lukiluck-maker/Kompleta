@@ -300,5 +300,27 @@
     nagraniaWidoczne = !nagraniaWidoczne;
   }
 </script>
+<script>
+  function ukryjNagrania02Sierpnia2025() {
+    const teraz = new Date();
+
+    // Data docelowa: 2 sierpnia 2025, 22:30
+    const dataDocelowa = new Date("2025-08-02T22:30:00");
+
+    // Sprawdzenie, czy aktualna data przekracza datę docelową
+    if (teraz >= dataDocelowa) {
+      const nagrania = document.querySelectorAll('.nagranie-admin');
+      nagrania.forEach(nagranie => nagranie.style.display = "none");
+
+      const toggleButton = document.getElementById('toggleButton');
+      if (toggleButton) {
+        toggleButton.textContent = "Pokaż nagrania";
+      }
+    }
+  }
+
+  // Uruchomienie funkcji po załadowaniu strony
+  window.addEventListener('load', ukryjNagrania02Sierpnia2025);
+</script>
 </body>
 </html>
