@@ -222,7 +222,7 @@
 		<audio class="nagranie-admin" controls>
 			<source src="Antyfona maryjna.m4a" type="audio/mpeg">
 			</audio>
-		<img src="Antyfona Witaj Królowo.png" alt="Antyfona matyjna" class="neumy" style="width: 100%; height: auto;">
+		<img src="Antyfona Witaj Królowo.png" alt="Antyfona maryjna" class="neumy" style="width: 100%; height: auto;">
 		</section>
 		<section>
 		<h2>Inne pieśni</h2>
@@ -321,6 +321,39 @@
 
   // Uruchomienie funkcji po załadowaniu strony
   window.addEventListener('load', ukryjNagrania02Sierpnia2025);
+</script>
+<script>
+  function sprawdzICzyUkrycNagrania() {
+    const teraz = new Date();
+    const dataDocelowa = new Date("2025-08-02T22:30:00");
+
+    if (teraz >= dataDocelowa) {
+      const nagrania = document.querySelectorAll('.nagranie-admin');
+      nagrania.forEach(n => n.style.display = "none");
+
+      const toggleButton = document.getElementById('toggleButton');
+      if (toggleButton) {
+        toggleButton.textContent = "Pokaż nagrania";
+      }
+
+      clearInterval(sprawdzanie); // zatrzymaj sprawdzanie po ukryciu
+    }
+  }
+
+  // Sprawdź raz po załadowaniu
+  window.addEventListener('load', () => {
+    sprawdzICzyUkrycNagrania();
+
+    // Co 30 sekund sprawdzaj ponownie
+    window.sprawdzanie = setInterval(sprawdzICzyUkrycNagrania, 30000);
+  });
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/Kompleta/sw.js')
+      .then(reg => console.log('Service Worker zarejestrowany:', reg.scope))
+      .catch(err => console.error('Błąd rejestracji:', err));
+  }
 </script>
 </body>
 </html>
